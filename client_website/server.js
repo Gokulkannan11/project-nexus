@@ -4,14 +4,17 @@ const mongoose = require('mongoose');
 
 const app = express();
 
+// Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
+// MongoDB connection
 mongoose.connect('mongodb://localhost:27017/nexusDB', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
 
+// Schema and Model for form submissions
 const submissionSchema = new mongoose.Schema({
     name: String,
     email: String,
@@ -20,6 +23,7 @@ const submissionSchema = new mongoose.Schema({
 
 const Submission = mongoose.model('Submission', submissionSchema);
 
+// Handling form submissions
 app.post('/submit-form', (req, res) => {
     const newSubmission = new Submission({
         name: req.body.name,
@@ -36,6 +40,7 @@ app.post('/submit-form', (req, res) => {
     });
 });
 
+// Server setup
 app.listen(3000, () => {
     console.log('Server started on port 3000');
 });
