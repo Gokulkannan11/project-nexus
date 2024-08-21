@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aniteens Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Aniteens</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#review">Add a Review</a></li>
+                <li><a href="#login" id="login-link">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="section">
+        <div class="overlay">
+            <h1>Welcome to Aniteens Restaurant</h1>
+            <p>Experience the best of anime-themed dining with exquisite multi-cuisine dishes.</p>
+        </div>
+    </section>
+
+    <section id="menu" class="section">
+        <h2>Our Menu</h2>
+        <div class="menu-grid">
+            <!-- Add your menu items here with images -->
+            <!-- Example Item -->
+            <div class="menu-item">
+                <img src="images/dish1.jpg" alt="Anime-themed Dish">
+                <h3>Dish Name</h3>
+                <p>Short description of the dish.</p>
+            </div>
+            <!-- Repeat similar blocks for each dish -->
+        </div>
+    </section>
+
+    <section id="review" class="section">
+        <h2>Add a Review</h2>
+        <form id="review-form">
+            <textarea placeholder="Write your review here..."></textarea>
+            <button type="submit">Submit Review</button>
+        </form>
+    </section>
+
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Login</h2>
+            <form id="login-form">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+                <p>Don't have an account? <a href="#" id="signup-link">Sign Up</a></p>
+            </form>
+        </div>
+    </div>
+
+    <div id="signup-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Sign Up</h2>
+            <form id="signup-form">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
